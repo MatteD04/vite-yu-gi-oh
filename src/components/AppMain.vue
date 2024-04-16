@@ -16,6 +16,12 @@ export default {
 
 <template>
     <div class="body">
+        <div class="container">
+            <select>
+                <option value="all">tutte le carte</option>
+                <option v-for="archetype in store.archetype" :value="archetype">{{ archetype.archetype_name }}</option>  
+            </select>
+        </div>
         <div class="container card-list">
             <SingleCard v-for="singleCard in store.cards" :key="singleCard.id" :cardInfo="singleCard"></SingleCard>
         </div>
@@ -33,5 +39,12 @@ export default {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px;
+}
+.container{
+    select{
+        padding: 10px;
+        margin: 0 0 40px 0;
+        width: 150px;
+    }
 }
 </style>

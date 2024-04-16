@@ -20,10 +20,17 @@ export default {
       .then((response) => {
         store.cards = response.data.data;
       });
+    },
+    getArchetypeApi() {
+      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+      .then((response) => {
+        store.archetype = response.data;
+      })
     }
   },
   mounted() {
     this.getCardsApi();
+    this.getArchetypeApi();
   }
 }
 </script>

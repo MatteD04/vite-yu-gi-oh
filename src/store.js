@@ -6,3 +6,10 @@ export const store = reactive({
     // searchedName: '',
     // searchedStatus: ''
 });
+
+export const type = reactive({
+    archetype: [],
+    // isLoading: true,
+    // searchedName: '',
+    // searchedStatus: ''
+});
