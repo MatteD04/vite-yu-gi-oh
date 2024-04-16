@@ -20,6 +20,13 @@ export default {
       .then((response) => {
         store.cards = response.data.data;
       });
+      if(store.searchedStatus !== '') {
+        if(store.archetype !== '') {
+          apiUrl += '&status=' + store.searchedStatus;
+        } else {
+          apiUrl += '?status=' + store.searchedStatus;
+        }
+      }
     },
     getArchetypeApi() {
       axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')

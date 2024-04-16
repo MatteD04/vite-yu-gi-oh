@@ -17,7 +17,7 @@ export default {
 <template>
     <div class="body">
         <div class="container">
-            <select>
+            <select @change="$emit('searchPerformed')" v-model="store.searchedStatus">
                 <option value="all">tutte le carte</option>
                 <option v-for="archetype in store.archetype" :value="archetype">{{ archetype.archetype_name }}</option>  
             </select>
@@ -44,7 +44,8 @@ export default {
     select{
         padding: 10px;
         margin: 0 0 40px 0;
-        width: 150px;
+        width: 200px;
+        font-size: 16px
     }
 }
 </style>
