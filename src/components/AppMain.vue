@@ -17,7 +17,7 @@ export default {
 <template>
     <div class="body">
         <div class="container card-list">
-            <SingleCard v-for="singleCard in store.cards" :key="singleCard.id" :cardinfo="singleCard"></SingleCard>
+            <SingleCard v-for="singleCard in store.cards" :key="singleCard.id" :cardInfo="singleCard"></SingleCard>
         </div>
     </div>
 </template>

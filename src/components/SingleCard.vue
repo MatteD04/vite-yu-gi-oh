@@ -1,15 +1,18 @@
 <script>
 export default {
-    name: 'SingleCard'
+    name: 'SingleCard',
+    props: {
+        cardInfo: Object
+    }
 }
 </script>
 
 <template>
     <div class="container-card">
-        <img src="https://images.ygoprodeck.com/images/cards_small/34541863.jpg">
+        <img :src="cardInfo.card_images[0].image_url_small">
         <div class="info-card">
-            <h3>nome</h3>
-            <p>tipo</p>
+            <h3>{{ cardInfo.name }}</h3>
+            <p>{{ cardInfo.archetype }}</p>
         </div>
     </div>
 </template>

@@ -1,3 +1,8 @@
 import { reactive } from 'vue';
 
-export const store
+export const store = reactive({
+    cards: [],
+    // isLoading: true,
+    // searchedName: '',
+    // searchedStatus: ''
+});
