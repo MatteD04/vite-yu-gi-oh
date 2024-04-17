@@ -17,9 +17,9 @@ export default {
 <template>
     <div class="body">
         <div class="container">
-            <select @change="$emit('searchPerformed')" v-model="store.searchedStatus">
-                <option value="all">tutte le carte</option>
-                <option v-for="archetype in store.archetype" :value="archetype">{{ archetype.archetype_name }}</option>  
+            <select v-model="store.selectedArchetype" @change="$emit('searchPerformed')">
+                <option value="">tutte le carte</option>
+                <option v-for="archetype in archetypes" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>  
             </select>
         </div>
         <div class="container card-list">

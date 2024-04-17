@@ -8,7 +8,8 @@ export const store = reactive({
 });
 
 export const type = reactive({
-    archetype: [],
+    archetypes: [],
+    selectedArchetype: ''
     // isLoading: true,
     // searchedName: '',
     // searchedStatus: ''
